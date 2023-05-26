@@ -1,0 +1,19 @@
+:root {
+    --dark: #111032;
+    --white: #F9F9FF;
+    --bg-dark: #161540;
+    --bg-light: #E2F2F8;
+    --accent-bright: #68CDD4;
+    --accent-medium: #95DBE1;
+    --accent-small: background: #6563B8;
+    --links-color: #2F3878;
+}
+
+body {
+    font-family: 'Source Sans Pro', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px; /* or 150% */
+    color: var(--dark);
+}
