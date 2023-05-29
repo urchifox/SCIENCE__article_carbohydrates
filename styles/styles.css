@@ -28,10 +28,17 @@ body {
 }
 
 main {
-    padding: 0 98px;
+    /* padding: 0 98px; */
+    /* width: 1170px; */
     margin: auto;
-    width: 1170px;
+    width: 100%;
     flex: 1 0 auto;
+}
+
+.width-770 {
+    width: 770px;
+    margin: 0 auto;
+    padding: 0 298px;
 }
 
 .visually-hidden {
@@ -59,6 +66,9 @@ img {
     display: block;
 }
 
+p {
+    margin: 0;
+}
 
 [class*="-link"][href]:hover,
 [class*="-link"][href]:focus-visible {
