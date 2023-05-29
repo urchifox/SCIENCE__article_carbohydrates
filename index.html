@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Raleway:wght@400;600&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/main-header.css">
     <link rel="stylesheet" href="styles/article.css">
@@ -15,17 +16,63 @@
 <body>
 
     <header class="main-header">
-
+        <nav class="main-nav">
+            <a href="#" class="main-nav__logo-link">
+                <img src="img/science-logo.svg" alt="Science. Наука для всех" width="123" height="36">
+            </a>
+            <ul class="main-nav__menu list-reset">
+                <li class="main-nav__menu-item">
+                    <a href="#" class="main-nav__menu-link link-reset">Химия</a>
+                </li>
+                <li class="main-nav__menu-item">
+                    <a href="#" class="main-nav__menu-link link-reset">Физика</a>
+                </li>
+                <li class="main-nav__menu-item">
+                    <a href="#" class="main-nav__menu-link link-reset">Математика</a>
+                </li>
+                <li class="main-nav__menu-item">
+                    <a href="#" class="main-nav__menu-link link-reset">Астрономия</a>
+                </li>
+                <li class="main-nav__menu-item">
+                    <a href="#" class="main-nav__menu-link link-reset">Биология</a>
+                </li>
+            </ul>
+            <form action="" class="main-nav__search-form">
+                <label for="search" class="main-nav__search-label">Поиск</label>
+                <input id="search" type="text" class="main-nav__search-input visually-hidden">
+            </form>
+        </nav>
     </header>
 
     <main>
         <article class="article">
-
         </article>
     </main>
 
     <footer class="main-footer">
-
+        <div class="main-footer__container">
+            <a href="#" class="main-footer__logo">
+                <img src="img/science-logo.svg" alt="Science. Наука для всех" width="123" height="36">
+            </a>
+            <ul class="main-footer__menu list-reset">
+                <li class="main-footer__menu-item">
+                    <a href="#" class="main-footer__menu-link link-reset">Химия</a>
+                </li>
+                <li class="main-footer__menu-item">
+                    <a href="#" class="main-footer__menu-link link-reset">Физика</a>
+                </li>
+                <li class="main-footer__menu-item">
+                    <a href="#" class="main-footer__menu-link link-reset">Математика</a>
+                </li>
+                <li class="main-footer__menu-item">
+                    <a href="#" class="main-footer__menu-link link-reset">Астрономия</a>
+                </li>
+                <li class="main-footer__menu-item">
+                    <a href="#" class="main-footer__menu-link link-reset">Биология</a>
+                </li>
+            </ul>
+            <a href="#" class="main-footer__copyright-link link-reset">Copyright © 2020</a>
+        </div>
     </footer>
     
 </body>

@@ -1,0 +1,38 @@
+.main-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border-top: 1px solid rgba(17, 16, 50, 0.2);
+}
+
+.main-footer__container {
+    width: 1170px;
+    padding: 39px 98px;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-columns: 130px 770px 130px;
+    align-items: center;
+    gap: 70px;
+}
+
+
+.main-footer__menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 35px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px; /* identical to box height, or 125% */
+}
+
+.main-footer__copyright-link {
+    font-size: 14px;
+    line-height: 20px; /* identical to box height, or 143% */
+    text-align: right;
+}
