@@ -1,8 +1,15 @@
 .main-footer {
+    /* версия закрепления футера внизу с позиционированием, требует у body:display: 
+        position: relative для позиционирования
+        padding-bottom: 194px = высота футера + расстояние до контента
+        box-sizing: border-box - чтобы паддинг не влиял на общую высоту
+
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0; */
+    flex: 0 0 auto;
+    margin-top: 80px;
 
     border-top: 1px solid rgba(17, 16, 50, 0.2);
 }
@@ -11,7 +18,7 @@
     width: 1170px;
     padding: 39px 98px;
     margin: 0 auto;
-    
+
     display: grid;
     grid-template-columns: 130px 770px 130px;
     align-items: center;
