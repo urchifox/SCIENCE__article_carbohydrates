@@ -41,6 +41,27 @@ main {
     padding: 0 298px;
 }
 
+.columns-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 100px;
+}
+
+.two-text-columns {
+    column-count: 2;
+    column-gap: 30px;
+}
+.two-text-columns p {
+    break-inside: avoid;
+}
+.two-text-columns p:first-child {
+    margin-top: 0;
+}
+.two-text-columns img {
+    margin-bottom: 15px;
+}
+
 .visually-hidden {
     position: absolute;
     clip: rect(1px, 1px, 1px, 1px);
@@ -67,7 +88,20 @@ img {
 }
 
 p {
-    margin: 0;
+    margin: 10px 0;
+}
+
+dfn {
+    font-style: normal;
+}
+
+sub {
+    font-size: 12px;
+    line-height: 0;
+}
+
+mark {
+    background-color: var(--accent-medium);
 }
 
 [class*="-link"][href]:hover,

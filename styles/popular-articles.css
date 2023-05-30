@@ -1,0 +1,109 @@
+.popular-articles__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.popular-articles__title {
+    margin: 0;
+}
+
+.popular-articles__see-btn {
+    padding: 10px 35px;
+    font-size: 16px;
+    line-height: 20px; /* identical to box height, or 125% */
+    border: 1px solid rgba(17, 16, 50, 0.2);
+    background-color: transparent;
+}
+
+.popular-articles__cards-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.popular-articles__card {
+    position: relative;
+    width: 330px;
+    padding: 198px 20px 20px 20px;
+    background: white;
+    box-shadow: 0px 4px 20px rgba(158, 158, 158, 0.16);
+    font-size: 18px;
+    line-height: 26px; /* or 144% */
+}
+.popular-articles__card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 370px;
+    height: 178px;
+    background-color: var(--bg-dark);
+}
+
+.popular-articles__card-cover_atom {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 370px;
+    height: 178px;
+}
+[class*=popular-articles__card-cover_] {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 370px;
+    height: 178px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.popular-articles__card-cover_atom {
+    background-image: url(../img/atom-pic.svg);
+    background-size: 108px 122px;
+}
+.popular-articles__card-cover_jar {
+    background-image: url(../img/jar-pic.svg);
+    background-size: 130px 138px;
+    background-position: left 57% top 50%;
+}
+
+.popular-articles__card-name {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px; /* identical to box height, or 125% */
+}
+
+.popular-articles__card-text {
+    height: 78px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 15px;
+}
+.popular-articles__card-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to top, white, transparent);
+}
+
+.popular-articles__read-link {
+    font-weight: 600;
+    color: var(--links-color);
+    text-decoration-skip-ink: none; 
+    text-decoration-thickness: 1px;
+}
+.popular-articles__read-link[href]:hover,
+.popular-articles__read-link[href]:focus-visible {
+    border-bottom: none;
+}

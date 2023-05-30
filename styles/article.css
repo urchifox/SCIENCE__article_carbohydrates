@@ -1,5 +1,6 @@
 .article {
     margin: 0 auto;
+    counter-reset: footnotes;
 }
 
         /* ----- HEADER ----- */
@@ -95,17 +96,17 @@
 
 .article__contents-link {
     color: var(--links-color);
+    text-decoration-skip-ink: none; 
+    text-decoration-thickness: 1px;
 }
 .article__contents-link[href]:hover,
 .article__contents-link[href]:focus-visible {
-    opacity: 0.7;
     border-bottom: none;
-}
-.article__contents-link[href]:active {
-    opacity: 0.4;
 }
 
         /* ----- ARTICLE OBJECTS ----- */
+
+    /* ----- titles ----- */
 
 .section-title {
     font-weight: 600;
@@ -119,4 +120,304 @@
     font-size: 24px;
     line-height: 30px; /* identical to box height, or 125% */
     margin: 30px 0 20px;
+}
+
+    /* ----- figures ----- */
+
+figure {
+    margin: 0;
+}
+figcaption {
+    margin: 35px 0 20px 0;
+}
+.columns-container figure {
+    display: flex;
+    flex-direction: column;
+}
+figure img {
+    flex: 1 0 auto;
+}
+.image-capture {
+    margin: 0;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px; /* identical to box height, or 129% */
+    text-align: center;
+}
+
+    /* ----- definition list ----- */
+
+/* .carbohydrates-list */
+dl {
+margin: 0;
+}
+/* .carbohydrates-item:not(:last-child) */
+dl div:not(:last-child) {
+    margin-bottom: 10px;
+}
+/* .carbohydrates-name  */
+dt {
+display: inline;
+}
+/* .carbohydrates-name::after */
+dt::after {
+    content: "-";
+    padding-left: 4px;
+}
+/* .carbohydrates-definition */
+dd {
+    display: inline;
+    margin: 0;
+}
+
+    /* ----- stripped table ----- */
+
+.stripped-table {
+    border-collapse: collapse;
+    font-size: 18px;
+    line-height: 26px; /* or 144% */
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.stripped-table p {
+    margin: 0;
+}
+.stripped-table col:nth-child(1) {
+    width: 230px;
+}
+.stripped-table col:nth-child(2) {
+    width: 260px;
+}
+.stripped-table col:nth-child(3) {
+    width: 280px;
+}
+.stripped-table thead {
+    font-weight: 600;
+}
+.stripped-table tbody tr:nth-child(odd) {
+    background-color: var(--bg-light);
+}
+.stripped-table tbody tr:nth-child(even) {
+    background-color: white;
+}
+.stripped-table td {
+    padding: 15px 10px;
+    vertical-align: top;
+}
+
+    /* ----- classic table ----- */
+
+.classic-table {
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+.classic-table caption {
+    margin: 15px auto 30px auto;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px; /* identical to box height, or 125% */
+}
+.classic-table col:first-child {
+    width: 100px;
+}
+.classic-table col:not(:first-child) {
+    width: 167px;
+}
+.classic-table thead,
+.classic-table tfoot {
+    background-color: var(--dark);
+    color: white;
+    font-weight: 600;
+}
+.classic-table thead tr:nth-child(1) td  {
+    padding: 5px;
+}
+.classic-table thead tr:nth-child(2) td {
+    font-size: 14px;
+    line-height: 18px; /* or 129% */
+}
+.classic-table td {
+    padding: 7px;
+    border: 2px solid #DDDDE4;
+    vertical-align: center;
+    text-align: center;
+    font-size: 18px;
+    line-height: 23px; /* or 128% */
+}
+
+
+    /* ----- numbered list ----- */
+
+.numbered-list {
+    counter-reset: item-number;
+}
+.numbered-list li {
+    counter-increment: item-number;
+    margin-top: 10px;
+}
+.numbered-list li::before {
+    content: counters(item-number, ".") ". ";
+}
+.numbered-list .numbered-list {
+    padding-left: 20px;
+}
+
+    /* ----- dotted list ----- */
+
+.dotted-list {
+    margin-bottom: 30px;
+}
+.dotted-list li {
+    position: relative;
+    padding-left: 18px;
+    margin-top: 10px;
+}
+.dotted-list li::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-small);
+    position: absolute;
+    top: 12px;
+    left: 0;
+}
+
+    /* ----- aside notes ----- */
+
+.aside-note { 
+    margin-top: 45px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 25px; /* identical to box height, or 125% */
+    padding: 30px 0;
+    border-top: 3px solid var(--accent-medium);
+    border-bottom: 3px solid var(--accent-medium);
+}
+.aside-note-text {
+    margin: 0;
+    margin-bottom: 15px;
+}
+.aside-note-link {
+    color: var(--links-color);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px; /* identical to box height, or 133% */
+}
+.aside-note-link[href]:hover,
+.aside-note-link[href]:focus-visible {
+    border-bottom: none;
+}
+
+    /* ----- formula ----- */
+
+.formula {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+}
+.formula sub {
+    font-size: 15px;
+}
+.formula-arrow {
+    width: 70px;
+    height: 12px;
+    background-image: url(../img/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+    /* ----- footnotes in text ----- */
+
+.footnote-link {
+    counter-increment: footnotes;
+    position: relative;
+}
+.footnote-link::after {
+    content: counter(footnotes);
+    /* способ с вырыванием из потока
+    position: absolute;
+    top: -8px;
+    right: -8px; */
+    line-height: 0;
+    vertical-align: super;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+       /* ----- ARTICLE FOOTER ----- */
+
+.article-footer {
+    margin: 66px auto 80px auto;
+}
+
+.article-footer__meta {
+    padding: 20px 0;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-top:  1px solid rgba(17, 16, 50, 0.2);
+    border-bottom:  1px solid rgba(17, 16, 50, 0.2);
+    font-size: 16px;
+    line-height: 20px; /* identical to box height, or 125% */
+}
+
+.article-footer__share-btn {
+    margin: 0 0 0 10px;
+    width: 51px;
+    height: 30px;
+    border: 1px solid rgba(17, 16, 50, 0.2);
+    background-color: transparent;
+    background-image: url(../img/share-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px 16px;
+}
+
+.article-footer__tags-list {
+    margin-left: auto;
+    width: 520px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 15px;
+}
+.article-footer__tags-link {
+    padding: 4px 29px;
+    border: 1px solid rgba(17, 16, 50, 0.2);
+}
+
+.footnote {
+    padding-bottom: 20px;
+    border-bottom:  1px solid rgba(17, 16, 50, 0.2);
+}
+
+.footnote__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 25px; /* identical to box height, or 125% */
+}
+
+.footnotes-list {
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 24px; /* or 150% */
+}
+
+.footnotes-item:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footnotes-back-link {
+    color: var(--links-color);
+    text-decoration: none;
 }
