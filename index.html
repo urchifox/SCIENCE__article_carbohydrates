@@ -38,9 +38,10 @@
                     <a href="#" class="main-nav__menu-link link-reset">Биология</a>
                 </li>
             </ul>
-            <form action="" class="main-nav__search-form">
-                <label for="search" class="main-nav__search-label">Поиск</label>
-                <input id="search" type="text" class="main-nav__search-input visually-hidden">
+            <form action="" class="main-nav__search-form" autocomplete="off">
+                <label for="search" class="main-nav__search-label visually-hidden">Поиск по сайту</label>
+                <input id="search" type="text" class="main-nav__search-input" placeholder="Поиск" >
+                <button class="main-nav__search-btn" type="submit"><span class="visually-hidden">Найти</span></button>
             </form>
         </nav>
     </header>
@@ -58,21 +59,23 @@
             <section class="width-770">
                 <p class="article-lead">Первое практическое знакомство человека с углеводами известно еще с глубокой древности. Обработка древесины, изготовление бумаги и тканей, хлебопечение, брожение – все эти процессы непосредственно связаны с переработкой углеводсодержащего сырья.</p>
                 <p>Углеводы входят в состав всех живых организмов, они составляют около 80% от сухой массы растений, а полисахарид целлюлоза является самым распространенным органическим веществом на Земле.</p>
-                <p class="article__contents-title">Содержание:</p>
-                <ol class="article__contents-list list-reset">
-                    <li class="article__contents-item">
-                        <a href="#first-section" class="article__contents-link">Определение, классификация и строение углеводов</a>
-                    </li>
-                    <li class="article__contents-item">
-                        <a href="#second-section" class="article__contents-link">Cтроение моносахаридов. Глюкоза, фруктоза</a>
-                    </li>
-                    <li class="article__contents-item">
-                        <a href="#third-section" class="article__contents-link">Дисахариды, сахароза</a>
-                    </li>
-                    <li class="article__contents-item">
-                        <a href="#forth-section" class="article__contents-link">Роль углеводов</a>
-                    </li>
-                </ol>
+                <p class="article__navigation-title">Содержание:</p>
+                <nav class="article__navigation">
+                    <ol class="article__navigation-list list-reset">
+                        <li class="article__navigation-item">
+                            <a href="#first-section" class="article__navigation-link">Определение, классификация и строение углеводов</a>
+                        </li>
+                        <li class="article__navigation-item">
+                            <a href="#second-section" class="article__navigation-link">Cтроение моносахаридов. Глюкоза, фруктоза</a>
+                        </li>
+                        <li class="article__navigation-item">
+                            <a href="#third-section" class="article__navigation-link">Дисахариды, сахароза</a>
+                        </li>
+                        <li class="article__navigation-item">
+                            <a href="#forth-section" class="article__navigation-link">Роль углеводов</a>
+                        </li>
+                    </ol>
+                </nav>
             </section>
 
             <section class="width-770" id="first-section">
@@ -213,7 +216,7 @@
                 <p>В организме глюкоза подвергается сложным биохимическим превращениям в результате которых образуется диоксид углерода и вода, при это выделяется энергия согласно итоговому уравнению:</p>
                 <p class="formula">
                     <span><i>C</i><sub>6</sub><i>H</i><sub>12</sub><i>O</i><sub>6</sub> + 6<i>O</i><sub>2</sub> </span>
-                    <span class="visually-hidden">преобразуется</span> 
+                    <span class="visually-hidden">преобразуется в</span> 
                     <span class="formula-arrow"></span>
                     <span>6<i>H</i><sub>2</sub>O + 6<i>CO</i><sub>2</sub> + 2800 кДж</span>
                 </p>
@@ -246,7 +249,7 @@
 
             <section class="width-770" id="forth-section">
                 <h2 class="section-title">Роль углеводов</h2>
-                <p>Соотношение водорода и кислорода в молекулах первых известных представителей углеводов было 2:1 (как в молекуле воды). Можно сказать, что углеводы являются соединениями углерода и <a class="footnote-link link-reset" href="#anchor3" id="anchor3-ref">воды</a>.</p>
+                <p>Соотношение водорода и кислорода в молекулах первых известных представителей углеводов было 2:1 (как в молекуле воды). Можно сказать, что углеводы являются соединениями <a class="footnote-link link-reset" href="#anchor3" id="anchor3-ref">углерода и воды</a>.</p>
                 <p>Углеводы являются важным компонентом клеток, а следовательно и тканей всех живых организмов, составляя (по сухой массе) основную часть  живой биомассы (растений – до 80% и до 3% – животных) на Земле. Источником углеводов для растительных организмов является процесс фотосинтеза.</p>
                 <h3 class="section-subtitle">Углеводы в организме человека</h3>
                 <p>Углеводы являются необходимым компонентом пищи, наряду с жирами, являются главным источником энергии – 1 грамм даёт 4 ккал. Углеводы необходимы для окисления жирных кислот до углекислого газа и воды.</p>
@@ -355,22 +358,26 @@
         <aside class="popular-articles width-770">
             <header class="popular-articles__header">
                 <h2 class="section-title popular-articles__title">Популярные статьи по химии</h2>
-                <button class="popular-articles__see-btn">Смотреть все</button>
+                <a href="#" class="popular-articles__see-link link-reset">Смотреть все</a>
             </header>
-            <div class="popular-articles__cards-container">
-                <section class="popular-articles__card">
-                    <span class="popular-articles__card-cover_atom"></span>
-                    <h3 class="popular-articles__card-name">Атом: термин и эволюция понятия</h3>
-                    <p class="popular-articles__card-text">Идея о том, что все вещества состоят из мелких, невидимых частиц возникла у людей еще до нашей эры в Древней</p>
-                    <a href="#" class="popular-articles__read-link">Читать дальше</a>
-                </section>
-                <section class="popular-articles__card">
-                    <span class="popular-articles__card-cover_jar"></span>
-                    <h3 class="popular-articles__card-name">Органический синтез: основы</h3>
-                    <p class="popular-articles__card-text">Раздел органической химии и технологии, направленный на  получение органических соединений </p>
-                    <a href="#" class="popular-articles__read-link">Читать дальше</a>
-                </section>
-            </div>
+            <ul class="popular-articles__cards-container list-reset">
+                <li class="popular-articles__card-item">
+                    <article class="popular-articles__card">
+                        <span class="popular-articles__card-cover_atom"></span>
+                        <h3 class="popular-articles__card-name">Атом: термин и эволюция понятия</h3>
+                        <p class="popular-articles__card-text">Идея о том, что все вещества состоят из мелких, невидимых частиц возникла у людей еще до нашей эры в Древней</p>
+                        <a href="#" class="popular-articles__read-link">Читать дальше</a>
+                    </article>
+                </li>
+                <li class="popular-articles__card-item">
+                    <article class="popular-articles__card">
+                        <span class="popular-articles__card-cover_jar"></span>
+                        <h3 class="popular-articles__card-name">Органический синтез: основы</h3>
+                        <p class="popular-articles__card-text">Раздел органической химии и технологии, направленный на  получение органических соединений </p>
+                        <a href="#" class="popular-articles__read-link">Читать дальше</a>
+                    </article>
+                </li>
+            </ul>
         </aside>
     </main>
 

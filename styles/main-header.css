@@ -9,6 +9,8 @@
     grid-template-columns: 130px 770px 130px;
     align-items: center;
     gap: 70px;
+
+    position: relative;
 }
 
 .main-nav__menu {
@@ -23,38 +25,72 @@
     line-height: 20px; /* identical to box height, or 125% */
 }
 
+
 .main-nav__search-form {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-}
+    justify-content: flex-end;
+    gap: 10px;
 
-.main-nav__search-label {
-    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 1092px;
+    transform: translateY(-50%);
+    transition: transform ease 1s;
+    background-color: var(--white);
+    padding: 5px;
+}
+.main-nav__search-form:has(.main-nav__search-input:focus) {
+    position: absolute;
+    top: 50%;
+    left: 1092px;
+    transform:translateY(-50%) translateX(-760px);
+} 
+
+.main-nav__search-input {
+    padding: 3px;
+    width: 45px;
+    border: none;
+    border-radius: 3px;
+    background-color: transparent;
+    font-weight: 400;
     font-size: 16px;
     line-height: 20px; /* identical to box height, or 125% */
-    padding-right: 33px;
-    position: relative;
+    transition: all ease 1s;
+}
+.main-nav__search-input::placeholder {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px; /* identical to box height, or 125% */
+    color: var(--dark);
+    text-align: center;
+}
+.main-nav__search-input:hover {
+    border:  1px solid rgba(17, 16, 50, 0.2);
+    background-color: white;
     cursor: pointer;
 }
-.main-nav__search-label::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 19px;
-    height: 19px;
-    background-image: url(../img/search-icon.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-}
-.main-nav__search-label:hover,
-.main-nav__search-label:focus-visible {
+.main-nav__search-input:hover::placeholder {
     opacity: 0.7;
 }
-.main-nav__search-label:active {
-    opacity: 0.4;
+.main-nav__search-input:focus {
+    width: 486px;
+    border:  1px solid rgba(17, 16, 50, 0.2);
+    background-color: white;
+    outline-color: var(--bg-dark);
+}
+.main-nav__search-input:focus::placeholder {
+    opacity: 0.3;
+    text-align: left;
 }
 
+.main-nav__search-btn {
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    border: none;
+    background-image: url(../img/search-icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 1px;
+}

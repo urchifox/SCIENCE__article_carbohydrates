@@ -9,6 +9,7 @@
     padding: 126px 0 142px 0;
     text-align: center;
     background-color: var(--bg-dark);
+    background-image: url(../img/pattern-dots.png);
     color: var(--white);
     margin-bottom: 60px;
 }
@@ -74,33 +75,33 @@
         /* ----- CONTENTS ----- */
 
 
-.article__contents-title {
+.article__navigation-title {
     font-weight: 600;
     font-size: 24px;
     line-height: 30px; /* identical to box height, or 125% */
     margin: 33px 0 19px 0;
 }
-.article__contents-list {
+.article__navigation-list {
     counter-reset: contents-number;
 }
-.article__contents-item:not(:last-child) {
+.article__navigation-item:not(:last-child) {
     margin-bottom: 10px;
 }
-.article__contents-item {
+.article__navigation-item {
     counter-increment: content-number;
 }
-.article__contents-item::before {
+.article__navigation-item::before {
     content: counter(content-number) ".";
     font-weight: 600;
 }
 
-.article__contents-link {
+.article__navigation-link {
     color: var(--links-color);
     text-decoration-skip-ink: none; 
     text-decoration-thickness: 1px;
 }
-.article__contents-link[href]:hover,
-.article__contents-link[href]:focus-visible {
+.article__navigation-link[href]:hover,
+.article__navigation-link[href]:focus-visible {
     border-bottom: none;
 }
 
